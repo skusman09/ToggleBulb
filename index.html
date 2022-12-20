@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle Bulb</title>
+    <style>
+        /* LLLLLLLLLLLLLLLLLLLLLLLLLLLLLL */
+        .bulb {
+            background-color: yellow;
+            height: 40px;
+            width: 35px;
+            border-radius: 50%;
+            position: relative;
+            top: -13.4rem;
+            left: 4.8rem;
+        }
+
+        .bulbcontainer {
+            background-color: red;
+            height: 40px;
+            width: 35px;
+            border-radius: 50%;
+            position: relative;
+            top: -13.4rem;
+            left: 4.8rem;
+        }
+
+        /* RRRRRRRRRRRRRRRRRRRRRRRRR */
+        .color {
+            background-color: yellow;
+            height: 40px;
+            width: 35px;
+            border-radius: 50%;
+            position: relative;
+            top: -15.9rem;
+            left: 19.31rem;
+        }
+
+        .bgcolor {
+            background-color: red;
+            height: 40px;
+            width: 35px;
+            border-radius: 50%;
+            position: relative;
+            top: -15.9rem;
+            left: 19.31rem;
+        }
+
+
+        /* RRRRRRRRRRRRRRRRRRRRRRRRRRR */
+        .dipperR {
+            background-color: navajowhite;
+            height: 10px;
+            width: 30px;
+            border-radius: 1.5px;
+            position: relative;
+            top: -15.4rem;
+            left: 19.4rem;
+        }
+
+        .dipperlightR {
+            background-color: orange;
+            height: 10px;
+            width: 30px;
+            border-radius: 1.5px;
+            position: relative;
+            top: -15.4rem;
+            left: 19.4rem;
+        }
+
+
+        /* LLLLLLLLLLLLLLLLLLL */
+        .dipperL {
+            background-color: navajowhite;
+            height: 10px;
+            width: 30px;
+            border-radius: 1.5px;
+            position: relative;
+            top: -16.05rem;
+            left: 4.95rem;
+        }
+
+        .dipperlightL {
+            background-color: orange;
+            height: 10px;
+            width: 30px;
+            border-radius: 1.5px;
+            position: relative;
+            top: -16.05rem;
+            left: 4.95rem;
+        }
+
+
+
+
+        .btn {
+            background-color: rgb(238, 255, 0);
+            cursor: pointer;
+            width: 50px;
+            text-align: center;
+            position: relative;
+            bottom: 14.73rem;
+            left: 11.57rem;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 3px rgb(91, 91, 244);
+        }
+
+        .btn:hover {
+            background-color: aqua;
+        }
+
+        .btn:active {
+            transform: translateY(2px);
+            box-shadow: 0px 1.5px rgb(91, 91, 244);
+        }
+
+        img {
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            width: 400px;
+            position: relative;
+        }
+
+        img.car {
+            border: 10px solid blue;
+        }
+
+        img.carimage {
+            border: 10px solid lime;
+        }
+
+        .header{
+            position: relative;
+            left: 7rem;
+            top: 3rem;
+        }
+    </style>
+</head>
+
+<body><header class="header">
+    <img src="car.jpg" id="car" class="car cars carimage" alt="car">
+    <div id="bulb" class="bulb bulbcontainer"></div>
+    <div id="color" class="color bgcolor"></div>
+    <div id="dipperR" class="dipperR dipperlightR"></div>
+    <div id="dipperL" class="dipperL dipperlightL"></div>
+    <button class="btn" onclick="sun()">Start</button></header>
+
+    <script>
+        document.body.style.background = "black"
+        document.body.style.color = "lime"
+
+        let a = document.getElementById("bulb");
+        let b = document.getElementById("color");
+        let c = document.getElementById("dipperR");
+        let d = document.getElementById("dipperL");
+        let e = document.getElementById("car");
+        function sun() {
+            setInterval(function () {
+                a.classList.toggle("bulbcontainer")
+                b.classList.toggle("bgcolor")
+                c.classList.toggle("dipperlightR")
+                d.classList.toggle("dipperlightL")
+                e.classList.toggle("carimage")
+            }, 500)
+        }
+
+    </script>
+</body>
+
+</html>
